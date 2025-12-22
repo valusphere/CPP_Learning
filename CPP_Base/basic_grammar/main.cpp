@@ -1,54 +1,29 @@
 #include <iostream>
+
+// ìž…ì¶œë ¥ì€
+// í”„ë¡œê·¸ëž¨ê³¼ ì™¸ë¶€ ì„¸ê³„ê°€ ì†Œí†µí•˜ëŠ” í†µë¡œì´ë‹¤.
+
+// 1. ì†ë‹˜ì´ ì£¼ë¬¸ì„ í•©ë‹ˆë‹¤ -> ìž…ë ¥
+// 2. ì£¼ë°©ì—ì„œ ìŒë£Œë¥¼ ë§Œë“­ë‹ˆë‹¤ -> ê°€ê³µ(ì²˜ë¦¬)
+// 3. ì™„ì„±ëœ ìŒë£Œê°€ ë‚˜ì˜µë‹ˆë‹¤ -> ì¶œë ¥
+
+// std::cin -> ìž…ë ¥
+// std::cout -> ì¶œë ¥
+
+// stdëŠ” í‘œì¤€ ë¼ì´ë¸ŒëŸ¬ë¦¬ ì´ë¦„ì´ê³ 
+// ::ëŠ” ë²”ìœ„ë¥¼ ì§€ì •í•´ì£¼ëŠ” ì—°ì‚°ìžì´ë‹¤
+
+//ìž…ë ¥ â†’ ê°€ê³µ(ì²˜ë¦¬) â†’ ì¶œë ¥
+
 int main(void)
 {
-	//printf("hello world !!!\n");
-	// Ãâ·Â Çü½ÄÀ» ¸ÕÀú Á¤ÇØ³õ°í ±× Çü½Ä¿¡ ¸Â°Ô °ªÀ» ³¢¿ö ³Ö´Â ÇÔ¼ö´Ù.		
+	int x;
 
-	// 1. ÄÚµå°¡ Á¦´ë·Î ½ÇÇàµÇ´ÂÁö È®ÀÎÇÒ ¶§
-		// ¾îµð±îÁö Á¤»ó?
-		// ¾î´À °úÁ¤¿¡¼­ ¹®Á¦°¡ »ý±ä°É±î?
-		// Á¤»óÀûÀ¸·Î Áö³ª¿Â °úÁ¤°ú ¹®Á¦°¡ »ý±ä ÁöÁ¡		
-		
-		// ¿©±â±îÁö´Â Á¤»óÀÔ´Ï´Ù.
-		// ÀÌ ÁöÁ¡Àº Åë°úÇß½À´Ï´Ù.
-		/*
-		int score = 10;
-		printf("½Ãµ¿ÀÌ °É·È½À´Ï´Ù\n");
+	//printf("ê°’ì€ %d ìž…ë‹ˆë‹¤\n", x);
+	//std::cout << "ê°’ì€ " << x << " ìž…ë‹ˆë‹¤\n";
+	std::cout << "ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: "; 
+	std::cin >> x;
 
-		printf("score¿¡ 10 ´ëÀÔÀÌ ÀÌ·ç¾îÁ³´Ù\n");
-
-		// ¿©±â¼­ ¹®Á¦°¡ ¹ß»ý
-		int result = score / 0;
-
-		printf("ÀÌ ¹®ÀåÀº ½ÇÇàµÇÁö ¾Ê½À´Ï´Ù\n");
-		*/
-	// 2. º¯¼ö ¾È¿¡ ¹¹°¡ µé¾îÀÖ´ÂÁö º¸°í ½ÍÀ» ¶§
-	/*
-		int potion = 2;
-		printf("ÇöÀç Æ÷¼Ç °³¼ö: %d\n", potion);
-
-		// ÀüÅõ ÈÄ Æ÷¼ÇÀ» ÁÖ¿ü´Ù
-		potion = potion + 3;
-		printf("Æ÷¼Ç 3°³ È¹µæ! ÇöÀç Æ÷¼Ç °³¼ö: %d\n", potion);
-
-		// ÀüÅõ Áß Æ÷¼ÇÀ» »ç¿ëÇß´Ù
-		potion = potion - 1;
-		printf("Æ÷¼Ç 1°³ »ç¿ë! ÇöÀç Æ÷¼Ç °³¼ö: %d\n", potion);
-
-		// »óÁ¡¿¡¼­ Æ÷¼ÇÀ» Ãß°¡·Î ±¸¸ÅÇß´Ù
-		potion = potion + 5;
-		printf("Æ÷¼Ç 5°³ ±¸¸Å! ÇöÀç Æ÷¼Ç °³¼ö: %d\n", potion);
-	*/
-	
-	// 3. ³»°¡ »ý°¢ÇÑ Èå¸§´ë·Î ÇÁ·Î±×·¥ÀÌ ¿òÁ÷ÀÌ´ÂÁö º¼ ¶§	
-		int traffic = 80;
-
-		// »óÈ²¿¡ µû¶ó ½ÇÇà Èå¸§ÀÌ ´Þ¶óÁø´Ù
-		if (traffic > 60) // ÇÁ·Î±×·¥ÀÌ ¾î¶² °æ·Î¸¦ Áö³ª¿Ô´ÂÁö
-		{
-			printf("±³ÅëÀÌ È¥ÀâÇÕ´Ï´Ù. ´Ù¸¥ ±æ·Î ÀÌµ¿ÇÕ´Ï´Ù.\n");
-		}
-
-		printf("°è¼Ó ¸ñÀûÁö¸¦ ÇâÇØ ÀÌµ¿ÇÕ´Ï´Ù.\n");		
+	std::cout << "ìž…ë ¥í•œ ê°’ì€ " << x << " ìž…ë‹ˆë‹¤.\n";
 	return 0;
 }
