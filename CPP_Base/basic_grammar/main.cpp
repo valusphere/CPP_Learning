@@ -1,37 +1,77 @@
 
 #include <iostream>
-
-// 지금까지는 int만 사용해 왔지만
-// int는 C++ 자료형 중 하나일 뿐이다
+#include <windows.h>
 
 int main(void)
 {
-	// 1
-	char ch = 'A';// 문자 1개
+	// 정수형 연산의 예
+	/*
+	int a = 5;
+	int b = 2;
 
-	// 2
-	short s = 10;// 작은 정수
-	int i = 100;// 기본 정수
-	long l = 1000;// 큰 정수
-	long long ll = 10000;// 아주 큰 정수
+	printf("int / int = %d\n", a / b); //결과는 2.5
+	*/
 
-	// 3
-	unsigned int ui = 50;// 음수가 없는 정수
+	// 실수형 연산의 예
+	/*
+	double a = 5;
+	double b = 2;
 
-	// 4
-	float f = 1.5f;// 소수점 숫자
-	double d = 3.14;// 더 정확한 소수점 숫자
-	long double ld = 5.123;// 더 큰 실수
+	printf("double / double = %f\n", a / b);
+	*/
 
-	// 5
-	bool isOn = true;// 참 / 거짓 true == 1 or false == 0
+	/*
+	SetConsoleOutputCP(CP_UTF8);
 
-	// C++에는 int 말고도 다양한 기본 자료형이 존재한다
-	// 지금은 "이런 것들이 있구나" 정도만 보면 된다
+	int a = 5;
+	int b = 2;
 
-	// 자료형은 이 값이 어떤 형태인지 알려주는 인식표다
+	printf("int / int -> double 저장: %f\n", (double)(a / b));
+	printf("double / int 계산: %f\n", (double)a / b);
+	*/
 
-	// 같은 숫자라도
-	// 자료형에 따라 처리 방식이 달라진다
+	/*
+	short a = 30000;
+	short b = 10000;
+	short result = a + b;
+
+	printf("short result = %d\n", result);
+	// 값을 담을수 있는 범위를 넘으면 결과는 틀어지고 믿을수 없어진다. (오버플로우)
+	*/
+
+	/*
+	unsigned int a = -1; // 에러는 안 나지만 값이 완전히 달라진다.
+	printf("unsigned int a = %u\n", a);
+
+	a = 0;
+	a = a - 1;
+
+	printf("a = %u\n", a);
+	*/
+
+	/*
+	double a = 0.1;
+	double b = 0.2;
+
+	printf("0.1 + 0.2 = %.17f\n", a + b);
+	*/
+
+	/*
+		> ✔ 정수끼리 계산하면 결과도 정수
+		> ✔ 실수끼리 계산하면 소수점 유지
+		> ✔ 다른 자료형을 섞으면 더 넓은 쪽으로 계산 (int = shot + int)
+		> ✔ 계산이 먼저, 대입(저장) 나중에
+		> ✔ 범위를 넘으면 값이 깨진다 
+		> ✔ unsigned에 음수를 넣으면 큰 값이 된다
+		> ✔ 실수 계산은 항상 정확하지 않다 예)0.300000000000004
+	*/
+
+	char a = 'A';
+	char b = 1;
+
+	printf("a = %c\n", a);
+	printf("a + 1 (as char) = %c\n", a + 1);
+	printf("a + 1 (as int)  = %d\n", a + 1);
+
 	return 0;
 }
